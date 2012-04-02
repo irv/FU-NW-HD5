@@ -1,0 +1,67 @@
+I wrote this over a few evenings back in 2005 when i first got my Sony 
+NW-HD5. I still own the device, only now i use MP3FileManager, which I 
+run on my Windows box at work. Hence why i stopped hacking this code. 
+
+A note on the name - If you've ever had to use Sonic Stage, you'll 
+understand. I used it for a week. Aplogies! 
+
+It's mid-2011 now, and looking back... all of it is quite, quite bad. 
+
+Well, utterly awful. More so than usual... 
+
+I'm annoyed I didn't do a better job with the ID3 tagging - I should 
+have just written it out and changed the first 2 bytes instead of badly 
+rebuilding it. 
+
+It's also hillariously not suitable for anything other than x86. 
+
+I'm not sure why I chose KDE's taglib at the time. I cleaned up an 
+orphaned taglib package on my box at home, which is what suddenly 
+reminded me I had this project sat there doing nothing. 
+
+I suspect it was chosing Taglib that made me go C++ rather than just C, 
+but... the code is awful. Please don't judge me. It was a long time ago, 
+and most of the time spent was analysing the dat files in a hex editor. 
+I've made no attempt to clean any of it up, but i'm quite surprised at 
+my liberal use of const everywhere. That makes me feel just a bit 
+better. Although I deserve a serious kicking fo rall those uninitialsed 
+variables, etc. 
+
+I've no idea why i decided to very badly pad strings instead of 
+converting to unicode. I did know it was UTF, my problem at the time was 
+that very few rippers on linux correctly wrote UTF in the ID3 tags - see 
+here for more details. 
+http://mail.kde.org/pipermail/amarok/2006-June/022200.html or google for 
+more examples. Grip was my ripper of choice, and is still wrong today. 
+
+i've no idea what this is in main, so don't ask: int missing[] = 
+{0x0F,0x62,0xC8,0xBC,0xA1,0x15,0x1F,0xC1,0x49,0x0F,0x68}; 
+
+All I can say is it doesn't appear to be used, i guess it was some poor 
+attempt at debugging something at some point. 
+
+I had originally used brute force to deduce the encryption key for my 
+device, by using sonic stage to transfer an mp3 of null bytes. I then 
+copied the resulting OMA file back across and XOR's with null bytes to 
+get the key. 
+
+However, it seems you can get it in two (much better!) ways, see 
+http://www.waider.ie/hacks/workshop/c/mple/FILE_FORMAT_v2.txt for 
+details. 
+
+Side note: I think it's cool we all worked this out in different ways 
+arond the same time. It's a shame we couldn't all get together back 
+then. 
+
+Instructions for use: Back up your OMGAUDIO folder! It did work, and 
+possibly still does. After a lot of trial and error, the only important 
+dat file to alter was 04cntinf.dat. By inserting the tags of the new 
+files into there, the player would rebuild the other files (seemingly) 
+correctly on its own. This was the minimum required to get it playing 
+music. 
+
+Final note on the Sony NW-HD5: I like this device. Other than their 
+idiotic attempt to ruin it by trying to control what goes on it, it's 
+genuinely good at what it does. I still get in excess of 15 hours 
+playback, and it's my player of choice for long haul flights. 
+
