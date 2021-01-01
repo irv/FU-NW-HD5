@@ -3,7 +3,7 @@ NW-HD5. I still own the device, only now i use MP3FileManager, which I
 run on my Windows box at work. Hence why i stopped hacking this code. 
 
 A note on the name - If you've ever had to use Sonic Stage, you'll 
-understand. I used it for a week. Aplogies! 
+understand. I used it for a week. Apologies! 
 
 It's mid-2011 now, and looking back... all of it is quite, quite bad. 
 
@@ -22,12 +22,12 @@ reminded me I had this project sat there doing nothing.
 I suspect it was chosing Taglib that made me go C++ rather than just C, 
 but... the code is awful. Please don't judge me. It was a long time ago, 
 and most of the time spent was analysing the dat files in a hex editor. 
-I've made no attempt to clean any of it up, but i'm quite surprised at 
+I've made no attempt to clean any of it up, but I'm quite surprised at 
 my liberal use of const everywhere. That makes me feel just a bit 
-better. Although I deserve a serious kicking fo rall those uninitialsed 
+better. Although I deserve a serious kicking for all those uninitialsed 
 variables, etc. 
 
-I've no idea why i decided to very badly pad strings instead of 
+I've no idea why I decided to very badly pad strings instead of 
 converting to unicode. I did know it was UTF, my problem at the time was 
 that very few rippers on linux correctly wrote UTF in the ID3 tags - see 
 here for more details. 
@@ -37,7 +37,7 @@ more examples. Grip was my ripper of choice, and is still wrong today.
 i've no idea what this is in main, so don't ask: int missing[] = 
 {0x0F,0x62,0xC8,0xBC,0xA1,0x15,0x1F,0xC1,0x49,0x0F,0x68}; 
 
-All I can say is it doesn't appear to be used, i guess it was some poor 
+All I can say is it doesn't appear to be used, I guess it was some poor 
 attempt at debugging something at some point. 
 
 I had originally used brute force to deduce the encryption key for my 
